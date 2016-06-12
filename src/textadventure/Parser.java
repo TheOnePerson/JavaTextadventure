@@ -18,6 +18,12 @@ public class Parser {
     String Command;
     String Object1;
     String Object2;
+    
+    /**
+     * Interprets the given input and fills the properties Command, Object1 and Object2
+     * @param input = Input the player has typed
+     * @return True, if at least one known command or object has been found, False if invalid input was given
+     */
     public boolean parse_input(String input) {   
         int counterobjects = 0;
         boolean retval = false;

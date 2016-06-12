@@ -6,6 +6,7 @@
 package textadventure;
 
 import java.util.Scanner;
+import textadventure.Constants;
 
 /**
  *
@@ -47,6 +48,7 @@ public class Textadventure {
     }
     private void ProgramLoop() {
         parser = new Parser();
+        parser.parse_input("Here comes the input!");
         int roomnumber = 0;
         int Status = 2;
         boolean newinroom = true;
@@ -60,7 +62,7 @@ public class Textadventure {
             Scanner inputReader = new Scanner(System.in);
             if (parser.parse_input(inputReader.nextLine())) {
                 switch (parser.Command) {
-                    case "go":
+                    case Constants.CMD_GO:
                         int newroomnumber = -1;
                         switch (parser.Object1) {
                             case "north":
